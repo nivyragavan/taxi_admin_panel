@@ -66,7 +66,8 @@ class CarApproval {
     this.fcCopy,
     this.reasons,
     this.status,
-    this.vendor,
+    this.vendorName,
+    this.vendorContact,
   });
 
   int? id;
@@ -81,7 +82,8 @@ class CarApproval {
   String? fcCopy;
   dynamic reasons;
   String? status;
-  Vendor? vendor;
+  String? vendorName;
+  String? vendorContact;
 
   factory CarApproval.fromJson(Map<String, dynamic> json) => CarApproval(
     id: json["id"],
@@ -96,7 +98,8 @@ class CarApproval {
     fcCopy: json["fc_copy"],
     reasons: json["reasons"],
     status: json["status"],
-    vendor: Vendor.fromJson(json["vendor"]),
+    vendorName: json["vendor.name"],
+    vendorContact: json["vendor.contact"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -112,26 +115,7 @@ class CarApproval {
     "fc_copy": fcCopy,
     "reasons": reasons,
     "status": status,
-    "vendor": vendor!.toJson(),
-  };
-}
-
-class Vendor {
-  Vendor({
-    this.name,
-    this.contact,
-  });
-
-  String? name;
-  String? contact;
-
-  factory Vendor.fromJson(Map<String, dynamic> json) => Vendor(
-    name: json["name"],
-    contact: json["contact"],
-  );
-
-  Map<String, dynamic> toJson() => {
-    "name": name,
-    "contact": contact,
+    "vendor.name": vendorName,
+    "vendor.contact": vendorContact,
   };
 }

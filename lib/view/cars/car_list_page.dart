@@ -9,6 +9,7 @@ import 'package:taxi_admin_panel/controller/car_search_controller.dart';
 import 'package:taxi_admin_panel/model/car_approved_list_model.dart';
 import 'package:taxi_admin_panel/service/api_service.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/sidebar_widget.dart';
 import '../authentication.dart';
@@ -445,37 +446,55 @@ class _CarListPageState extends State<CarListPage> {
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var frontImageUrl = e.carFrontPic ?? '';
+                                      await launchUrl(Uri.parse(frontImageUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var chassisImageUrl = e.chassisPic ?? '';
+                                      await launchUrl(Uri.parse(chassisImageUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var rcFrontUrl = e.rcFront ?? '';
+                                      await launchUrl(Uri.parse(rcFrontUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var rcBackUrl = e.rcBack ?? '';
+                                      await launchUrl(Uri.parse(rcBackUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var insuranceUrl = e.insurence ?? '';
+                                      await launchUrl(Uri.parse(insuranceUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var fcUrl = e.fcCopy ?? '';
+                                      await launchUrl(Uri.parse(fcUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                               ]);

@@ -7,6 +7,7 @@ import 'package:taxi_admin_panel/model/vendor_image_viewed_status_list_model.dar
 import 'package:taxi_admin_panel/model/vendor_list_model.dart';
 import 'package:taxi_admin_panel/service/api_service.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../constant/style.dart';
 import '../../widgets/sidebar_widget.dart';
@@ -193,7 +194,10 @@ class _AddVendorPageState extends State<AddVendorPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var aadhaarFrontUrl = vendorsList.adharFront ?? '';
+                                        await launchUrl(Uri.parse(aadhaarFrontUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -215,7 +219,10 @@ class _AddVendorPageState extends State<AddVendorPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var aadhaarBackUrl = vendorsList.adharBack ?? '';
+                                        await launchUrl(Uri.parse(aadhaarBackUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -243,7 +250,10 @@ class _AddVendorPageState extends State<AddVendorPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var panCardUrl = vendorsList.pancard ?? '';
+                                        await launchUrl(Uri.parse(panCardUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -265,7 +275,10 @@ class _AddVendorPageState extends State<AddVendorPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var passbookUrl = vendorsList.passbook ?? '';
+                                        await launchUrl(Uri.parse(passbookUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -287,7 +300,10 @@ class _AddVendorPageState extends State<AddVendorPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var rental1Url = vendorsList.rentalAgreement1 ?? '';
+                                        await launchUrl(Uri.parse(rental1Url));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -309,7 +325,10 @@ class _AddVendorPageState extends State<AddVendorPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var rental2Url = vendorsList.rentalAgreement2 ?? '';
+                                        await launchUrl(Uri.parse(rental2Url));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],

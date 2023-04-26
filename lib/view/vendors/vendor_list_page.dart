@@ -9,6 +9,7 @@ import 'package:taxi_admin_panel/controller/vendor_search_controller.dart';
 import 'package:taxi_admin_panel/model/vendor_approved_list_model.dart';
 import 'package:taxi_admin_panel/service/api_service.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/sidebar_widget.dart';
 import '../authentication.dart';
@@ -437,37 +438,55 @@ class _VendorListPageState extends State<VendorListPage> {
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var aadhaarFrontUrl = e.adharFront ?? '';
+                                      await launchUrl(Uri.parse(aadhaarFrontUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var aadhaarBackUrl = e.adharBack ?? '';
+                                      await launchUrl(Uri.parse(aadhaarBackUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var panCardUrl = e.pancard ?? '';
+                                      await launchUrl(Uri.parse(panCardUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var passbookUrl = e.passbook ?? '';
+                                      await launchUrl(Uri.parse(passbookUrl));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var rental1Url = e.rentalAgreement1 ?? '';
+                                      await launchUrl(Uri.parse(rental1Url));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         side: BorderSide(color: green)),
-                                    onPressed: () {},
+                                    onPressed: () async{
+                                      var rental2Url = e.rentalAgreement2 ?? '';
+                                      await launchUrl(Uri.parse(rental2Url));
+                                    },
                                     child: Icon(Icons.download_rounded,
                                         color: green))),
                               ]);

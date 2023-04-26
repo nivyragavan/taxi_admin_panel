@@ -8,6 +8,7 @@ import 'package:taxi_admin_panel/model/car_image_viewed_status_list_model.dart';
 import 'package:taxi_admin_panel/model/car_list_model.dart';
 import 'package:taxi_admin_panel/service/api_service.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../widgets/sidebar_widget.dart';
 import '../authentication.dart';
 
@@ -191,7 +192,10 @@ class _AddCarPageState extends State<AddCarPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var frontImageUrl = carsList.carFrontPic ?? '';
+                                        await launchUrl(Uri.parse(frontImageUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -213,7 +217,10 @@ class _AddCarPageState extends State<AddCarPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var chassisImageUrl = carsList.chassisPic ?? '';
+                                        await launchUrl(Uri.parse(chassisImageUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -241,7 +248,10 @@ class _AddCarPageState extends State<AddCarPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var rcFrontUrl = carsList.rcFront ?? '';
+                                        await launchUrl(Uri.parse(rcFrontUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -263,7 +273,10 @@ class _AddCarPageState extends State<AddCarPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var rcBackUrl = carsList.rcBack ?? '';
+                                        await launchUrl(Uri.parse(rcBackUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -285,7 +298,10 @@ class _AddCarPageState extends State<AddCarPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var insuranceUrl = carsList.insurence ?? '';
+                                        await launchUrl(Uri.parse(insuranceUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -307,7 +323,10 @@ class _AddCarPageState extends State<AddCarPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var fcUrl = carsList.fcCopy ?? '';
+                                        await launchUrl(Uri.parse(fcUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],

@@ -9,6 +9,7 @@ import 'package:taxi_admin_panel/model/driver_image_viewed_status_list_model.dar
 import 'package:taxi_admin_panel/model/driver_list_model.dart';
 import 'package:taxi_admin_panel/service/api_service.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/sidebar_widget.dart';
 import '../authentication.dart';
@@ -258,7 +259,10 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var profileUrl = driversList.profilePic ?? '';
+                                        await launchUrl(Uri.parse(profileUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -280,7 +284,10 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var aadhaarFrontUrl = driversList.adharFront ?? '';
+                                        await launchUrl(Uri.parse(aadhaarFrontUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -302,7 +309,10 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var aadhaarBackUrl = driversList.adharBack ?? '';
+                                        await launchUrl(Uri.parse(aadhaarBackUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -324,7 +334,10 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var licenseFrontUrl = driversList.licenseFront ?? '';
+                                        await launchUrl(Uri.parse(licenseFrontUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],
@@ -346,7 +359,10 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           side: BorderSide(color: green)),
-                                      onPressed: () {},
+                                      onPressed: () async{
+                                        var licenseBackUrl = driversList.licenseBack ?? '';
+                                        await launchUrl(Uri.parse(licenseBackUrl));
+                                      },
                                       child: const CustomText(text: 'View'),
                                     )
                                   ],

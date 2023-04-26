@@ -9,6 +9,7 @@ import 'package:taxi_admin_panel/controller/driver_search_controller.dart';
 import 'package:taxi_admin_panel/model/driver_approved_list_model.dart';
 import 'package:taxi_admin_panel/service/api_service.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/sidebar_widget.dart';
 import '../authentication.dart';
@@ -451,31 +452,46 @@ class _DriverListPageState extends State<DriverListPage> {
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
                                     side: BorderSide(color: green)),
-                                onPressed: () {},
+                                onPressed: () async{
+                                  var profileUrl = e.profilePic ?? '';
+                                  await launchUrl(Uri.parse(profileUrl));
+                                },
                                 child: Icon(Icons.download_rounded,
                                     color: green))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
                                     side: BorderSide(color: green)),
-                                onPressed: () {},
+                                onPressed: () async{
+                                  var aadhaarFrontUrl = e.adharFront ?? '';
+                                  await launchUrl(Uri.parse(aadhaarFrontUrl));
+                                },
                                 child: Icon(Icons.download_rounded,
                                     color: green))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
                                     side: BorderSide(color: green)),
-                                onPressed: () {},
+                                onPressed: () async{
+                                  var aadhaarBackUrl = e.adharBack ?? '';
+                                  await launchUrl(Uri.parse(aadhaarBackUrl));
+                                },
                                 child: Icon(Icons.download_rounded,
                                     color: green))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
                                     side: BorderSide(color: green)),
-                                onPressed: () {},
+                                onPressed: () async{
+                                  var licenseFrontUrl = e.licenseFront ?? '';
+                                  await launchUrl(Uri.parse(licenseFrontUrl));
+                                },
                                 child: Icon(Icons.download_rounded,
                                     color: green))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
                                     side: BorderSide(color: green)),
-                                onPressed: () {},
+                                onPressed: () async{
+                                  var licenseBackUrl = e.licenseBack ?? '';
+                                  await launchUrl(Uri.parse(licenseBackUrl));
+                                },
                                 child: Icon(Icons.download_rounded,
                                     color: green))),
                           ]);

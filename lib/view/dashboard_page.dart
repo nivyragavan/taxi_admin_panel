@@ -248,7 +248,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   weight: FontWeight.bold,
                   color: dark,
                 ),
-                Container(
+                SizedBox(
                     width: 600,
                     height: 200,
                     child: SfCartesianChart(
@@ -335,7 +335,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   weight: FontWeight.bold,
                   color: dark,
                 ),
-                Container(
+                SizedBox(
                     width: 600,
                     height: 200,
                     child: SfCartesianChart(
@@ -422,7 +422,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   weight: FontWeight.bold,
                   color: dark,
                 ),
-                Container(
+                SizedBox(
                     width: 600,
                     height: 200,
                     child: SfCartesianChart(
@@ -499,7 +499,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: 260,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -510,7 +510,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   weight: FontWeight.bold,
                   color: dark,
                 ),
-                Container(
+                SizedBox(
                     width: 600,
                     height: 200,
                     child: SfCartesianChart(
@@ -531,7 +531,7 @@ class _DashboardPageState extends State<DashboardPage> {
             height: 1,
             color: lightGrey,
           ),
-          Container(
+          SizedBox(
             height: 260,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -585,7 +585,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: 260,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -596,7 +596,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   weight: FontWeight.bold,
                   color: dark,
                 ),
-                Container(
+                SizedBox(
                     width: 600,
                     height: 200,
                     child: SfCartesianChart(
@@ -617,7 +617,7 @@ class _DashboardPageState extends State<DashboardPage> {
             height: 1,
             color: lightGrey,
           ),
-          Container(
+          SizedBox(
             height: 260,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -671,7 +671,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: 260,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -682,7 +682,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   weight: FontWeight.bold,
                   color: dark,
                 ),
-                Container(
+                SizedBox(
                     width: 600,
                     height: 200,
                     child: SfCartesianChart(
@@ -703,7 +703,7 @@ class _DashboardPageState extends State<DashboardPage> {
             height: 1,
             color: lightGrey,
           ),
-          Container(
+          SizedBox(
             height: 260,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

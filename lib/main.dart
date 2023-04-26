@@ -9,7 +9,7 @@ import 'package:taxi_admin_panel/view/dashboard_page.dart';
 import 'package:taxi_admin_panel/view/drivers/add_driver_page.dart';
 import 'package:taxi_admin_panel/view/drivers/driver_list_page.dart';
 import 'package:taxi_admin_panel/view/home_page.dart';
-import 'package:taxi_admin_panel/view/location_page.dart';
+import 'package:taxi_admin_panel/view/pricing_page.dart';
 import 'package:taxi_admin_panel/view/package_cab_page.dart';
 import 'package:taxi_admin_panel/view/profile_page.dart';
 import 'package:taxi_admin_panel/view/rides/cancelled_rides_page.dart';
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
       // initialRoute: AuthenticationPage.id,
       routes:{
         AuthenticationPage.id :(context) => const AuthenticationPage(),
-        HomePage.id : (context) =>  const HomePage(),
+        // HomePage.id : (context) =>  const HomePage(),
         DashboardPage.id : (context) => const DashboardPage(),
         ProfilePage.id : (context) => const ProfilePage(),
         SubAdminPage.id : (context) =>const SubAdminPage(),
@@ -74,9 +74,9 @@ class MyApp extends StatelessWidget {
         ScheduledRidesPage.id : (context) => const ScheduledRidesPage(),
         RidesHistoryPage.id : (context) => const RidesHistoryPage(),
         ManualBookingHistoryPage.id : (context) => const ManualBookingHistoryPage(),
-        LocationPage.id : (context) => const LocationPage()
+        PricingPage.id : (context) => const PricingPage()
       },
-      home: adminLogin == null ? AuthenticationPage() : const DashboardPage(),
+      home: adminLogin == null ? const AuthenticationPage() : const DashboardPage(),
     );
   }
 }

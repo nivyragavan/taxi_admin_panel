@@ -7,7 +7,7 @@ import 'package:taxi_admin_panel/view/cars/car_list_page.dart';
 import 'package:taxi_admin_panel/view/dashboard_page.dart';
 import 'package:taxi_admin_panel/view/drivers/add_driver_page.dart';
 import 'package:taxi_admin_panel/view/drivers/driver_list_page.dart';
-import 'package:taxi_admin_panel/view/location_page.dart';
+import 'package:taxi_admin_panel/view/pricing_page.dart';
 import 'package:taxi_admin_panel/view/package_cab_page.dart';
 import 'package:taxi_admin_panel/view/profile_page.dart';
 import 'package:taxi_admin_panel/view/rides/cancelled_rides_page.dart';
@@ -143,9 +143,9 @@ class SideBarWidget{
           ),
         ]),
         AdminMenuItem(
-          title: 'Location',
-          route: LocationPage.id,
-          icon: Icons.location_on,
+          title: 'Pricing',
+          route: PricingPage.id,
+          icon: Icons.payments,
         ),
       ],
       footer: SizedBox(
