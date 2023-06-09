@@ -23,7 +23,7 @@ class CancelledRidesPage extends StatelessWidget {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -45,10 +45,10 @@ class CancelledRidesPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomText(
-                  text: 'Rides History',
+                  text: 'Cancelled Rides',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -80,45 +80,45 @@ class CancelledRidesPage extends StatelessWidget {
           columns: [
             DataColumn(
                 label:
-                    Text('S:No', style: TextStyle(fontSize: 15, color: green))),
+                    Text('S:No', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                    Text('From', style: TextStyle(fontSize: 15, color: green))),
+                    Text('From', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                    Text('To', style: TextStyle(fontSize: 15, color: green))),
+                    Text('To', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('User Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Driver Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Booking Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Pickup Location',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Drop Location',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Package',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                    Text('Cab', style: TextStyle(fontSize: 15, color: green))),
+                    Text('Cab', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Cancelled by',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Reason',
-                    style: TextStyle(fontSize: 15, color: green)))
+                    style: TextStyle(fontSize: 15, color: blue)))
           ],
           source: dataTableSource,
           columnSpacing: 30,
           horizontalMargin: 40,
-          arrowHeadColor: green,
+          arrowHeadColor: blue,
         ),
       ),
     );

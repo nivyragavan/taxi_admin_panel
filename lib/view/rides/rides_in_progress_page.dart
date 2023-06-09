@@ -19,47 +19,46 @@ class RidesInProgressPage extends StatelessWidget {
     return AdminScaffold(
         backgroundColor: light,
         appBar: AppBar(
-        title: const Text(
-        'Admin Panel',
-        style: TextStyle(color: Colors.black),
-    ),
-    backgroundColor: Colors.white,
-    actions: [
-    IconButton(
-    onPressed: () {
-    Get.offAll(const AuthenticationPage());
-    },
-    icon: const Icon(
-    Icons.logout,
-    color: Colors.black,
-    ))
-    ],
-    ),
-    sideBar: SideBarWidget().sidebarMenus(RidesInProgressPage.id),
-    body: Padding(
-      padding: const EdgeInsets.all(20),
-      child: SizedBox(
-        width: Get.width,
-        height: Get.height,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomText(
-              text: 'Rides In Progress',
-              size: 20,
-              weight: FontWeight.bold,
-              color: green,
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-                child: ListView(
-                  children: [buildRideProgressTable()],
-                )),
+          title: const Text(
+            'Admin Panel',
+            style: TextStyle(color: Colors.black),
+          ),
+          backgroundColor: yellow,
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Get.offAll(const AuthenticationPage());
+                },
+                icon: const Icon(
+                  Icons.logout,
+                  color: Colors.black,
+                ))
           ],
         ),
-      ),
-    )
-    );
+        sideBar: SideBarWidget().sidebarMenus(RidesInProgressPage.id),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: SizedBox(
+            width: Get.width,
+            height: Get.height,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomText(
+                  text: 'Rides In Progress',
+                  size: 20,
+                  weight: FontWeight.bold,
+                  color: blue,
+                ),
+                const SizedBox(height: 20),
+                Expanded(
+                    child: ListView(
+                  children: [buildRideProgressTable()],
+                )),
+              ],
+            ),
+          ),
+        ));
   }
 
   buildRideProgressTable() {
@@ -81,45 +80,45 @@ class RidesInProgressPage extends StatelessWidget {
           columns: [
             DataColumn(
                 label:
-                Text('S:No', style: TextStyle(fontSize: 15, color: green))),
+                    Text('S:No', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                Text('From', style: TextStyle(fontSize: 15, color: green))),
+                    Text('From', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                Text('To', style: TextStyle(fontSize: 15, color: green))),
+                    Text('To', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('User Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Driver Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Booking Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Pickup Location',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Drop Location',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Package',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                Text('Cab', style: TextStyle(fontSize: 15, color: green))),
+                    Text('Cab', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Start OTP',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('End OTP',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
           ],
           source: dataTableSource,
           columnSpacing: 30,
           horizontalMargin: 40,
-          arrowHeadColor: green,
+          arrowHeadColor: blue,
         ),
       ),
     );
@@ -129,20 +128,20 @@ class RidesInProgressPage extends StatelessWidget {
 class MyData extends DataTableSource {
   final List<Map<String, dynamic>> data = List.generate(
       20,
-          (index) => {
-        "S:No": index + 1,
-        "From": "25/05/2023",
-        "To": "31/05/2023",
-        "userid": "User001",
-        "driverid": "Driver001",
-        "bookingid": "ABCD1234",
-        "pickup": "Coimbatore",
-        "drop": "Kodaikanal",
-        "package": "Tour",
-        "cab": "SUV",
-        "startotp": "123456",
-        "endotp": "098765"
-      });
+      (index) => {
+            "S:No": index + 1,
+            "From": "25/05/2023",
+            "To": "31/05/2023",
+            "userid": "User001",
+            "driverid": "Driver001",
+            "bookingid": "ABCD1234",
+            "pickup": "Coimbatore",
+            "drop": "Kodaikanal",
+            "package": "Tour",
+            "cab": "SUV",
+            "startotp": "123456",
+            "endotp": "098765"
+          });
 
   @override
   DataRow getRow(int index) {

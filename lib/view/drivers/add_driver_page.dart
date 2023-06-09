@@ -68,7 +68,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -93,7 +93,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                   text: 'Add Driver',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -117,7 +117,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
       child: isLoading == false
           ? Center(
               child: CircularProgressIndicator(
-                color: green,
+                color: blue,
               ),
             )
           : driverListModel!.body!.driverList!.isEmpty
@@ -258,7 +258,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var profileUrl = driversList.profilePic ?? '';
                                         await launchUrl(Uri.parse(profileUrl));
@@ -283,7 +283,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var aadhaarFrontUrl = driversList.adharFront ?? '';
                                         await launchUrl(Uri.parse(aadhaarFrontUrl));
@@ -308,7 +308,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var aadhaarBackUrl = driversList.adharBack ?? '';
                                         await launchUrl(Uri.parse(aadhaarBackUrl));
@@ -333,7 +333,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var licenseFrontUrl = driversList.licenseFront ?? '';
                                         await launchUrl(Uri.parse(licenseFrontUrl));
@@ -358,7 +358,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var licenseBackUrl = driversList.licenseBack ?? '';
                                         await launchUrl(Uri.parse(licenseBackUrl));
@@ -599,7 +599,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                       ),
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                            side: BorderSide(color: green)),
+                            side: BorderSide(color: blue)),
                         onPressed: () {},
                         child: const CustomText(text: 'View'),
                       )
@@ -621,7 +621,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                       ),
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                            side: BorderSide(color: green)),
+                            side: BorderSide(color: blue)),
                         onPressed: () {},
                         child: const CustomText(text: 'View'),
                       )
@@ -643,7 +643,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                       ),
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                            side: BorderSide(color: green)),
+                            side: BorderSide(color: blue)),
                         onPressed: () {},
                         child: const CustomText(text: 'View'),
                       )
@@ -665,7 +665,7 @@ class _AddDriverPageState extends State<AddDriverPage> {
                       ),
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                            side: BorderSide(color: green)),
+                            side: BorderSide(color: blue)),
                         onPressed: () {},
                         child: const CustomText(text: 'View'),
                       )

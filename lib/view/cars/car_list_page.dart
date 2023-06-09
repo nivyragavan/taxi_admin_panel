@@ -10,7 +10,6 @@ import 'package:taxi_admin_panel/model/car_approved_list_model.dart';
 import 'package:taxi_admin_panel/service/api_service.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../widgets/sidebar_widget.dart';
 import '../authentication.dart';
 
@@ -59,7 +58,7 @@ class _CarListPageState extends State<CarListPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -84,7 +83,7 @@ class _CarListPageState extends State<CarListPage> {
                   text: 'Cars List',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -127,14 +126,14 @@ class _CarListPageState extends State<CarListPage> {
       width: 300,
       height: 40,
       child: TextField(
-        cursorColor: green,
+        cursorColor: blue,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(10),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: green)),
-          suffixIcon: Icon(Icons.search, color: green),
+              borderSide: BorderSide(color: blue)),
+          suffixIcon: Icon(Icons.search, color: blue),
           hintText: "Register Number or Model",
         ),
       ),
@@ -154,7 +153,7 @@ class _CarListPageState extends State<CarListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter from date'),
             readOnly: true,
             onTap: () async {
@@ -196,7 +195,7 @@ class _CarListPageState extends State<CarListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter to date'),
             readOnly: true,
             onTap: () async {
@@ -230,7 +229,7 @@ class _CarListPageState extends State<CarListPage> {
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: green, fixedSize: const Size(200, 40)),
+                backgroundColor: blue, fixedSize: const Size(200, 40)),
             onPressed: () {
               ApiService().approvedCarDownload(fromDate.text, toDate.text);
             },
@@ -255,7 +254,7 @@ class _CarListPageState extends State<CarListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter from date'),
             readOnly: true,
             onTap: () async {
@@ -297,7 +296,7 @@ class _CarListPageState extends State<CarListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter to date'),
             readOnly: true,
             onTap: () async {
@@ -331,7 +330,7 @@ class _CarListPageState extends State<CarListPage> {
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: green, fixedSize: const Size(200, 40)),
+                backgroundColor: blue, fixedSize: const Size(200, 40)),
             onPressed: () {
               ApiService().approvedCarDownload(fromDate.text, toDate.text);
             },
@@ -348,7 +347,7 @@ class _CarListPageState extends State<CarListPage> {
       print('updateeeeee');
       if (searchController.searchResult.isEmpty) {
         return Center(
-          child: CircularProgressIndicator(color: green),
+          child: CircularProgressIndicator(color: blue),
         );
       }
       print('updateeeeee......length');
@@ -387,52 +386,52 @@ class _CarListPageState extends State<CarListPage> {
                               DataColumn(
                                 label: Text('S:No',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                 label: Text('Car Register Number',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                 label: Text('Car Model',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                 label: Text('Vendor Name',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                 label: Text('Vendor Contact',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                   label: Text('Front Image',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('Chassis Image',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('RC Front',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('RC Back',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('Insurance',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('FC Copy',
                                       style: TextStyle(
-                                          fontSize: 15, color: green)))
+                                          fontSize: 15, color: blue)))
                             ],
                             rows: List.generate(
                                 searchController.searchResult.length, (index) {
@@ -445,58 +444,58 @@ class _CarListPageState extends State<CarListPage> {
                                 DataCell(Text('${e.vendor!.contact}')),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var frontImageUrl = e.carFrontPic ?? '';
                                       await launchUrl(Uri.parse(frontImageUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var chassisImageUrl = e.chassisPic ?? '';
                                       await launchUrl(Uri.parse(chassisImageUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var rcFrontUrl = e.rcFront ?? '';
                                       await launchUrl(Uri.parse(rcFrontUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var rcBackUrl = e.rcBack ?? '';
                                       await launchUrl(Uri.parse(rcBackUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var insuranceUrl = e.insurence ?? '';
                                       await launchUrl(Uri.parse(insuranceUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var fcUrl = e.fcCopy ?? '';
                                       await launchUrl(Uri.parse(fcUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                               ]);
                             })),
                       )),

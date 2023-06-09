@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_scaffold/admin_scaffold.dart';
 import 'package:get/get.dart';
 import 'package:taxi_admin_panel/constant/style.dart';
+import 'package:taxi_admin_panel/view/authentication.dart';
 import 'package:taxi_admin_panel/widgets/custom_text.dart';
+import 'package:taxi_admin_panel/widgets/sidebar_widget.dart';
 
 class ScheduledRidesPage extends StatelessWidget {
   const ScheduledRidesPage({Key? key}) : super(key: key);
@@ -12,7 +15,27 @@ class ScheduledRidesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return AdminScaffold(
+        backgroundColor: light,
+        appBar: AppBar(
+        title: const Text(
+        'Admin Panel',
+        style: TextStyle(color: Colors.black),
+    ),
+    backgroundColor: yellow,
+    actions: [
+    IconButton(
+    onPressed: () {
+    Get.offAll(const AuthenticationPage());
+    },
+    icon: const Icon(
+    Icons.logout,
+    color: Colors.black,
+    ))
+    ],
+    ),
+    sideBar: SideBarWidget().sidebarMenus(ScheduledRidesPage.id),
+    body: Padding(
       padding: const EdgeInsets.all(20),
       child: SizedBox(
         width: Get.width,
@@ -24,7 +47,7 @@ class ScheduledRidesPage extends StatelessWidget {
               text: 'Scheduled Rides',
               size: 20,
               weight: FontWeight.bold,
-              color: green,
+              color: blue,
             ),
             const SizedBox(height: 20),
             Expanded(
@@ -34,6 +57,7 @@ class ScheduledRidesPage extends StatelessWidget {
           ],
         ),
       ),
+    )
     );
   }
 
@@ -56,39 +80,39 @@ class ScheduledRidesPage extends StatelessWidget {
           columns: [
             DataColumn(
                 label:
-                Text('S:No', style: TextStyle(fontSize: 15, color: green))),
+                Text('S:No', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                Text('From', style: TextStyle(fontSize: 15, color: green))),
+                Text('From', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                Text('To', style: TextStyle(fontSize: 15, color: green))),
+                Text('To', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('User Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Pickup Location',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Drop Location',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Package',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                Text('Cab', style: TextStyle(fontSize: 15, color: green))),
+                Text('Cab', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Start OTP',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('End OTP',
-                    style: TextStyle(fontSize: 15, color: green)))
+                    style: TextStyle(fontSize: 15, color: blue)))
           ],
           source: dataTableSource,
           columnSpacing: 30,
           horizontalMargin: 40,
-          arrowHeadColor: green,
+          arrowHeadColor: blue,
         ),
       ),
     );

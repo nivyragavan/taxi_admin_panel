@@ -52,7 +52,7 @@ class _AssignedDriversListPageState extends State<AssignedDriversListPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -77,7 +77,7 @@ class _AssignedDriversListPageState extends State<AssignedDriversListPage> {
                   text: 'Assigned Drivers List',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -109,7 +109,7 @@ class _AssignedDriversListPageState extends State<AssignedDriversListPage> {
         child: isLoading == false
             ? Center(
                 child: CircularProgressIndicator(
-                  color: green,
+                  color: blue,
                 ),
               )
             : assignedDriversListModel!.body!.assignList!.isEmpty
@@ -122,28 +122,28 @@ class _AssignedDriversListPageState extends State<AssignedDriversListPage> {
                         columns: [
                           DataColumn(
                             label: Text('S:No',
-                                style: TextStyle(fontSize: 15, color: green)),
+                                style: TextStyle(fontSize: 15, color: blue)),
                           ),
                           DataColumn(
                             label: Text('Vendor Name',
-                                style: TextStyle(fontSize: 15, color: green)),
+                                style: TextStyle(fontSize: 15, color: blue)),
                           ),
                           DataColumn(
                             label: Text('Vendor Contact',
-                                style: TextStyle(fontSize: 15, color: green)),
+                                style: TextStyle(fontSize: 15, color: blue)),
                           ),
                           DataColumn(
                               label: Text('Cab Register Number',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Driver Name',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Driver Contact',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                         ],
                         rows: List.generate(
                             assignedDriversListModel!.body!.assignList!.length,

@@ -59,7 +59,7 @@ class _DriverListPageState extends State<DriverListPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -84,7 +84,7 @@ class _DriverListPageState extends State<DriverListPage> {
                   text: 'Drivers List',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -127,14 +127,14 @@ class _DriverListPageState extends State<DriverListPage> {
       width: 300,
       height: 40,
       child: TextField(
-        cursorColor: green,
+        cursorColor: blue,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(10),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: green)),
-          suffixIcon: Icon(Icons.search, color: green),
+              borderSide: BorderSide(color: blue)),
+          suffixIcon: Icon(Icons.search, color: blue),
           hintText: "Name or Number",
         ),
       ),
@@ -154,7 +154,7 @@ class _DriverListPageState extends State<DriverListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter from date'),
             readOnly: true,
             onTap: () async {
@@ -196,7 +196,7 @@ class _DriverListPageState extends State<DriverListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter to date'),
             readOnly: true,
             onTap: () async {
@@ -230,7 +230,7 @@ class _DriverListPageState extends State<DriverListPage> {
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: green, fixedSize: const Size(200, 40)),
+                backgroundColor: blue, fixedSize: const Size(200, 40)),
             onPressed: () {
               ApiService().approvedDriverDownload(fromDate.text, toDate.text);
             },
@@ -255,7 +255,7 @@ class _DriverListPageState extends State<DriverListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter from date'),
             readOnly: true,
             onTap: () async {
@@ -297,7 +297,7 @@ class _DriverListPageState extends State<DriverListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter to date'),
             readOnly: true,
             onTap: () async {
@@ -331,7 +331,7 @@ class _DriverListPageState extends State<DriverListPage> {
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: green, fixedSize: const Size(200, 40)),
+                backgroundColor: blue, fixedSize: const Size(200, 40)),
             onPressed: () {
               ApiService().approvedDriverDownload(fromDate.text, toDate.text);
             },
@@ -348,7 +348,7 @@ class _DriverListPageState extends State<DriverListPage> {
       debugPrint('updateeeeee');
       if (searchController.searchResult.isEmpty) {
         return Center(
-          child: CircularProgressIndicator(color: green),
+          child: CircularProgressIndicator(color: blue),
         );
       }
       debugPrint('updateeeeee......length');
@@ -373,7 +373,7 @@ class _DriverListPageState extends State<DriverListPage> {
           child: isLoading == false
               ? Center(
                   child: CircularProgressIndicator(
-                    color: green,
+                    color: blue,
                   ),
                 )
               : searchController.searchResult.isEmpty
@@ -387,54 +387,54 @@ class _DriverListPageState extends State<DriverListPage> {
                           DataColumn(
                               label: Text('S:No',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Name',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Phone Number',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('District',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('License',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Expiry Date',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Vendor Name',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Vendor Contact',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Profile Photo',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Aadhaar Front',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Aadhaar Back',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('License Front',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('License Back',
-                                  style: TextStyle(fontSize: 15, color: green)))
+                                  style: TextStyle(fontSize: 15, color: blue)))
                         ],
                         rows: List.generate(
                             searchController.searchResult.length, (index) {
@@ -451,49 +451,49 @@ class _DriverListPageState extends State<DriverListPage> {
                             DataCell(Text('${e.vendor!.contact}')),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
-                                    side: BorderSide(color: green)),
+                                    side: BorderSide(color: blue)),
                                 onPressed: () async{
                                   var profileUrl = e.profilePic ?? '';
                                   await launchUrl(Uri.parse(profileUrl));
                                 },
                                 child: Icon(Icons.download_rounded,
-                                    color: green))),
+                                    color: blue))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
-                                    side: BorderSide(color: green)),
+                                    side: BorderSide(color: blue)),
                                 onPressed: () async{
                                   var aadhaarFrontUrl = e.adharFront ?? '';
                                   await launchUrl(Uri.parse(aadhaarFrontUrl));
                                 },
                                 child: Icon(Icons.download_rounded,
-                                    color: green))),
+                                    color: blue))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
-                                    side: BorderSide(color: green)),
+                                    side: BorderSide(color: blue)),
                                 onPressed: () async{
                                   var aadhaarBackUrl = e.adharBack ?? '';
                                   await launchUrl(Uri.parse(aadhaarBackUrl));
                                 },
                                 child: Icon(Icons.download_rounded,
-                                    color: green))),
+                                    color: blue))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
-                                    side: BorderSide(color: green)),
+                                    side: BorderSide(color: blue)),
                                 onPressed: () async{
                                   var licenseFrontUrl = e.licenseFront ?? '';
                                   await launchUrl(Uri.parse(licenseFrontUrl));
                                 },
                                 child: Icon(Icons.download_rounded,
-                                    color: green))),
+                                    color: blue))),
                             DataCell(OutlinedButton(
                                 style: OutlinedButton.styleFrom(
-                                    side: BorderSide(color: green)),
+                                    side: BorderSide(color: blue)),
                                 onPressed: () async{
                                   var licenseBackUrl = e.licenseBack ?? '';
                                   await launchUrl(Uri.parse(licenseBackUrl));
                                 },
                                 child: Icon(Icons.download_rounded,
-                                    color: green))),
+                                    color: blue))),
                           ]);
                         }),
                       ),

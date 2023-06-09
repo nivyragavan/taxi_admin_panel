@@ -62,7 +62,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                           style: GoogleFonts.roboto(
                               fontSize: 30,
                               fontWeight: FontWeight.bold,
-                              color: green)),
+                              color: blue)),
                     ],
                   ),
                   const SizedBox(
@@ -86,12 +86,12 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         labelText: "Email",
-                        labelStyle: TextStyle(color: green),
+                        labelStyle: TextStyle(color: blue),
                         hintText: "abc@domain.com",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green),
+                          borderSide: BorderSide(color: blue),
                           borderRadius: BorderRadius.circular(10),
                         )),
                     onSaved: (value) {
@@ -117,12 +117,12 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         labelText: "Password",
-                        labelStyle: TextStyle(color: green),
+                        labelStyle: TextStyle(color: blue),
                         hintText: "123",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green),
+                          borderSide: BorderSide(color: blue),
                           borderRadius: BorderRadius.circular(10),
                         )),
                     onSaved: (value) {
@@ -162,7 +162,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [green, dark]),
+                          gradient: LinearGradient(colors: [blue, yellow]),
                           borderRadius: BorderRadius.circular(10)),
                       alignment: Alignment.center,
                       width: double.maxFinite,

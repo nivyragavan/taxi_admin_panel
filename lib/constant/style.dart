@@ -7,3 +7,9 @@ Color active = const Color(0xFF3C19C0);
 Color black = Colors.black;
 Color green = const Color(0xff00a99d);
 Color lightGreen = const Color(0xff95ede7);
+
+
+
+Color yellow = const Color(0xfffca311);
+Color blue = const Color(0xff003566);
+Color grey = const Color(0xffe5e5e5);

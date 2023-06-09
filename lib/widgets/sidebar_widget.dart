@@ -26,18 +26,19 @@ import 'package:taxi_admin_panel/view/vendors/vendor_wallet_transaction_page.dar
 class SideBarWidget{
   sidebarMenus(selectedRoute){
     return SideBar(
-      backgroundColor: Colors.white,
-      iconColor: Colors.black,
-      activeIconColor: black,
-      textStyle: const TextStyle(
-        color: Colors.black,
+      backgroundColor: yellow,
+      iconColor: black,
+      activeIconColor: grey,
+      textStyle:  TextStyle(
+        color: black,
         fontSize: 15,
       ),
-      activeTextStyle: const TextStyle(
-        color: Colors.black,
+      activeTextStyle: TextStyle(
+        color: grey,
         fontSize: 15,
       ),
-      activeBackgroundColor: lightGreen,
+      activeBackgroundColor: blue,
+      borderColor: Colors.grey,
       items: const [
         AdminMenuItem(
           title: 'Dashboard',
@@ -148,12 +149,12 @@ class SideBarWidget{
           icon: Icons.payments,
         ),
       ],
-      footer: SizedBox(
-          width: 200,
+      footer: Container(
+          width: double.infinity,
           height: 100,
+          color: yellow,
           child: Image.asset('assets/icons/logo.png',
-              color: const Color.fromRGBO(255, 255, 255, 0.5),
-              colorBlendMode: BlendMode.modulate)),
+          )),
       selectedRoute: selectedRoute,
       onSelected: (item) {
         Get.toNamed(item.route!);

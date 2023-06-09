@@ -69,19 +69,19 @@ class _DashboardPageState extends State<DashboardPage> {
     return AdminScaffold(
         backgroundColor: light,
         appBar: AppBar(
-          title: const Text(
+          title:  Text(
             'Admin Panel',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color:black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
                   Get.offAll(const AuthenticationPage());
                 },
-                icon: const Icon(
+                icon: Icon(
                   Icons.logout,
-                  color: Colors.black,
+                  color: black,
                 ))
           ],
         ),
@@ -98,7 +98,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   text: 'Dashboard',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -253,7 +253,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [blue],
                       series: [
                         StackedColumnSeries(
                             dataSource: revenueChartData,
@@ -340,7 +340,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [yellow],
                       series: [
                         StackedColumnSeries(
                             dataSource: revenueChartData,
@@ -427,7 +427,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [yellow],
                       series: [
                         StackedColumnSeries(
                             dataSource: revenueChartData,
@@ -515,7 +515,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [blue],
                       series: [
                         StackedColumnSeries(
                             dataSource: revenueChartData,
@@ -601,7 +601,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [yellow],
                       series: [
                         StackedColumnSeries(
                             dataSource: revenueChartData,
@@ -687,7 +687,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [yellow],
                       series: [
                         StackedColumnSeries(
                             dataSource: revenueChartData,
@@ -748,22 +748,22 @@ class _DashboardPageState extends State<DashboardPage> {
       child: PaginatedDataTable(
         columns: [
           DataColumn(
-              label: Text('Id', style: TextStyle(fontSize: 15, color: green))),
+              label: Text('Id', style: TextStyle(fontSize: 15, color: blue))),
           DataColumn(
               label:
-                  Text('Name', style: TextStyle(fontSize: 15, color: green))),
+                  Text('Name', style: TextStyle(fontSize: 15, color: blue))),
           DataColumn(
               label:
-                  Text('Email', style: TextStyle(fontSize: 15, color: green))),
+                  Text('Email', style: TextStyle(fontSize: 15, color: blue))),
           DataColumn(
               label: Text('Phone Number',
-                  style: TextStyle(fontSize: 15, color: green))),
+                  style: TextStyle(fontSize: 15, color: blue))),
           DataColumn(
               label: Text('Location',
-                  style: TextStyle(fontSize: 15, color: green))),
+                  style: TextStyle(fontSize: 15, color: blue))),
           DataColumn(
               label: Text('Ratings',
-                  style: TextStyle(fontSize: 15, color: green))),
+                  style: TextStyle(fontSize: 15, color: blue))),
         ],
         source: dataTableSource,
         // columnSpacing: 30,

@@ -58,7 +58,7 @@ class _VendorListPageState extends State<VendorListPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -83,7 +83,7 @@ class _VendorListPageState extends State<VendorListPage> {
                   text: 'Vendor List',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -126,14 +126,14 @@ class _VendorListPageState extends State<VendorListPage> {
       width: 300,
       height: 40,
       child: TextField(
-        cursorColor: green,
+        cursorColor: blue,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(10),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: green)),
-          suffixIcon: Icon(Icons.search, color: green),
+              borderSide: BorderSide(color: blue)),
+          suffixIcon: Icon(Icons.search, color: blue),
           hintText: "Name or Number",
         ),
         onChanged: (val) {
@@ -156,7 +156,7 @@ class _VendorListPageState extends State<VendorListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter from date'),
             readOnly: true,
             onTap: () async {
@@ -198,7 +198,7 @@ class _VendorListPageState extends State<VendorListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter to date'),
             readOnly: true,
             onTap: () async {
@@ -232,7 +232,7 @@ class _VendorListPageState extends State<VendorListPage> {
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: green, fixedSize: const Size(200, 40)),
+                backgroundColor: blue, fixedSize: const Size(200, 40)),
             onPressed: () {
               ApiService().approvedVendorDownload(fromDate.text, toDate.text);
             },
@@ -257,7 +257,7 @@ class _VendorListPageState extends State<VendorListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter from date'),
             readOnly: true,
             onTap: () async {
@@ -299,7 +299,7 @@ class _VendorListPageState extends State<VendorListPage> {
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: green, width: 2)),
+                    borderSide: BorderSide(color: blue, width: 2)),
                 hintText: 'Enter to date'),
             readOnly: true,
             onTap: () async {
@@ -333,7 +333,7 @@ class _VendorListPageState extends State<VendorListPage> {
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: green, fixedSize: const Size(200, 40)),
+                backgroundColor: blue, fixedSize: const Size(200, 40)),
             onPressed: () {
               ApiService().approvedVendorDownload(fromDate.text, toDate.text);
             },
@@ -350,7 +350,7 @@ class _VendorListPageState extends State<VendorListPage> {
       print('updateeeeee');
       if (searchController.searchResult.isEmpty) {
         return Center(
-          child: CircularProgressIndicator(color: green),
+          child: CircularProgressIndicator(color: blue),
         );
       }
       print('updateeeeee......length');
@@ -376,7 +376,7 @@ class _VendorListPageState extends State<VendorListPage> {
             child: isLoading == false
                 ? Center(
                     child: CircularProgressIndicator(
-                      color: green,
+                      color: blue,
                     ),
                   )
                 : searchController.searchResult.isEmpty
@@ -391,42 +391,42 @@ class _VendorListPageState extends State<VendorListPage> {
                               DataColumn(
                                 label: Text('S:No',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                 label: Text('Name',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                 label: Text('Contact',
                                     style:
-                                        TextStyle(fontSize: 15, color: green)),
+                                        TextStyle(fontSize: 15, color: blue)),
                               ),
                               DataColumn(
                                   label: Text('Front Image',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('Chassis Image',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('RC Front',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('RC Back',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('Insurance',
                                       style: TextStyle(
-                                          fontSize: 15, color: green))),
+                                          fontSize: 15, color: blue))),
                               DataColumn(
                                   label: Text('FC Copy',
                                       style: TextStyle(
-                                          fontSize: 15, color: green)))
+                                          fontSize: 15, color: blue)))
                             ],
                             rows: List.generate(
                                 searchController.searchResult.length, (index) {
@@ -437,58 +437,58 @@ class _VendorListPageState extends State<VendorListPage> {
                                 DataCell(Text('${e.contact}')),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var aadhaarFrontUrl = e.adharFront ?? '';
                                       await launchUrl(Uri.parse(aadhaarFrontUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var aadhaarBackUrl = e.adharBack ?? '';
                                       await launchUrl(Uri.parse(aadhaarBackUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var panCardUrl = e.pancard ?? '';
                                       await launchUrl(Uri.parse(panCardUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var passbookUrl = e.passbook ?? '';
                                       await launchUrl(Uri.parse(passbookUrl));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var rental1Url = e.rentalAgreement1 ?? '';
                                       await launchUrl(Uri.parse(rental1Url));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                                 DataCell(OutlinedButton(
                                     style: OutlinedButton.styleFrom(
-                                        side: BorderSide(color: green)),
+                                        side: BorderSide(color: blue)),
                                     onPressed: () async{
                                       var rental2Url = e.rentalAgreement2 ?? '';
                                       await launchUrl(Uri.parse(rental2Url));
                                     },
                                     child: Icon(Icons.download_rounded,
-                                        color: green))),
+                                        color: blue))),
                               ]);
                             })),
                       )),

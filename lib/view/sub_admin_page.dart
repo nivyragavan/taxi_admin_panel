@@ -61,7 +61,7 @@ class _SubAdminPageState extends State<SubAdminPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -86,7 +86,7 @@ class _SubAdminPageState extends State<SubAdminPage> {
                   text: 'Sub Admin',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -103,7 +103,7 @@ class _SubAdminPageState extends State<SubAdminPage> {
                       'Sub-Admin List',
                       style: TextStyle(
                           fontSize: 20,
-                          color: green,
+                          color: blue,
                           fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
@@ -127,7 +127,7 @@ class _SubAdminPageState extends State<SubAdminPage> {
           Text(
             'Add Sub-Admin',
             style: TextStyle(
-                fontSize: 20, color: green, fontWeight: FontWeight.bold),
+                fontSize: 20, color: blue, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 20),
           Row(
@@ -135,39 +135,39 @@ class _SubAdminPageState extends State<SubAdminPage> {
               Expanded(
                 child: TextFormField(
                   controller: name,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Name",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: TextFormField(
                   controller: contact,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Phone Number",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: TextFormField(
                   controller: designation,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Designation",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
             ],
@@ -178,32 +178,32 @@ class _SubAdminPageState extends State<SubAdminPage> {
               Expanded(
                 child: TextFormField(
                   controller: email,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Email Address",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: TextFormField(
                   controller: password,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Password",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
               const SizedBox(width: 10),
               Expanded(
                   child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: green),
+                      style: ElevatedButton.styleFrom(backgroundColor: blue),
                       onPressed: () async {
                         if (formKey.currentState!.validate()) {
                           var data = await ApiService().subAdminAdd(
@@ -245,7 +245,7 @@ class _SubAdminPageState extends State<SubAdminPage> {
         Text(
           'Add Sub-Admin',
           style: TextStyle(
-              fontSize: 20, color: green, fontWeight: FontWeight.bold),
+              fontSize: 20, color: blue, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 20),
         Row(
@@ -253,26 +253,26 @@ class _SubAdminPageState extends State<SubAdminPage> {
             Expanded(
               child: TextFormField(
                 controller: name,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Name",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextFormField(
                 controller: contact,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Phone Number",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
           ],
@@ -283,26 +283,26 @@ class _SubAdminPageState extends State<SubAdminPage> {
             Expanded(
               child: TextFormField(
                 controller: designation,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Designation",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextFormField(
                 controller: email,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Email Address",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
           ],
@@ -313,13 +313,13 @@ class _SubAdminPageState extends State<SubAdminPage> {
             Expanded(
               child: TextFormField(
                 controller: password,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Password",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
             const SizedBox(width: 10),
@@ -417,24 +417,24 @@ class _SubAdminPageState extends State<SubAdminPage> {
                         columns: [
                           DataColumn(
                             label: Text('S:No',
-                                style: TextStyle(fontSize: 15, color: green)),
+                                style: TextStyle(fontSize: 15, color: blue)),
                           ),
                           DataColumn(
                             label: Text('Name',
-                                style: TextStyle(fontSize: 15, color: green)),
+                                style: TextStyle(fontSize: 15, color: blue)),
                           ),
                           DataColumn(
                             label: Text('Contact',
-                                style: TextStyle(fontSize: 15, color: green)),
+                                style: TextStyle(fontSize: 15, color: blue)),
                           ),
                           DataColumn(
                               label: Text('Designation',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           DataColumn(
                               label: Text('Email Address',
                                   style:
-                                      TextStyle(fontSize: 15, color: green))),
+                                      TextStyle(fontSize: 15, color: blue))),
                           // DataColumn(
                           //     label: Text('Password',
                           //         style:

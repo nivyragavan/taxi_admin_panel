@@ -23,7 +23,7 @@ class VendorWalletTransactionPage extends StatelessWidget {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -48,7 +48,7 @@ class VendorWalletTransactionPage extends StatelessWidget {
                   text: 'Vendor Wallet Transaction',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Align(
@@ -71,14 +71,14 @@ class VendorWalletTransactionPage extends StatelessWidget {
       width: 300,
       height: 40,
       child: TextField(
-        cursorColor: green,
+        cursorColor: blue,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(10),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: green)),
-          suffixIcon: Icon(Icons.search, color: green),
+              borderSide: BorderSide(color: blue)),
+          suffixIcon: Icon(Icons.search, color: blue),
           hintText: "Search by ID",
         ),
       ),
@@ -104,27 +104,27 @@ class VendorWalletTransactionPage extends StatelessWidget {
           columns: [
             DataColumn(
                 label:
-                    Text('Id', style: TextStyle(fontSize: 15, color: green))),
+                    Text('Id', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                    Text('Name', style: TextStyle(fontSize: 15, color: green))),
+                    Text('Name', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label:
-                    Text('Date', style: TextStyle(fontSize: 15, color: green))),
+                    Text('Date', style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Booking Id',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Transaction Type',
-                    style: TextStyle(fontSize: 15, color: green))),
+                    style: TextStyle(fontSize: 15, color: blue))),
             DataColumn(
                 label: Text('Amount',
-                    style: TextStyle(fontSize: 15, color: green)))
+                    style: TextStyle(fontSize: 15, color: blue)))
           ],
           source: dataTableSource,
           // columnSpacing: 30,
           horizontalMargin: 40,
-          arrowHeadColor: green,
+          arrowHeadColor: blue,
         ),
       ),
     );

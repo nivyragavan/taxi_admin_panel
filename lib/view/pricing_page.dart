@@ -34,7 +34,7 @@ class PricingPage extends StatelessWidget {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -59,7 +59,7 @@ class PricingPage extends StatelessWidget {
                   text: 'Pricing',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -87,13 +87,15 @@ class PricingPage extends StatelessWidget {
           weight: FontWeight.bold,
           color: dark,
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         SizedBox(
           width: 500,
           child: TypeAheadFormField(
               textFieldConfiguration: TextFieldConfiguration(
                   controller: package,
-                  decoration:  InputDecoration(
+                  decoration: InputDecoration(
                       suffixIcon: Icon(
                         Icons.arrow_drop_down_rounded,
                         size: 40,
@@ -101,15 +103,13 @@ class PricingPage extends StatelessWidget {
                       ),
                       hintText: 'Select a package',
                       border: const OutlineInputBorder(),
-                      focusedBorder:
-                      OutlineInputBorder(borderSide: BorderSide(color: green)),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: blue)),
                       contentPadding: const EdgeInsets.all(15),
-                      isDense: true
-                  )),
+                      isDense: true)),
               suggestionsCallback: (pattern) {
-                return packageList.where((item) => item
-                    .toLowerCase()
-                    .contains(pattern.toLowerCase()));
+                return packageList.where((item) =>
+                    item.toLowerCase().contains(pattern.toLowerCase()));
               },
               onSuggestionSelected: (String val) {
                 package.text = val;
@@ -123,9 +123,9 @@ class PricingPage extends StatelessWidget {
               hideSuggestionsOnKeyboardHide: false,
               hideOnEmpty: false,
               noItemsFoundBuilder: (context) => const Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('No item found'),
-              ),
+                    padding: EdgeInsets.all(8),
+                    child: Text('No item found'),
+                  ),
               validator: (value) {
                 if (value!.isEmpty) {
                   return 'Select a category';
@@ -133,79 +133,98 @@ class PricingPage extends StatelessWidget {
                 return null;
               }),
         ),
-        const SizedBox(height: 15,),
+        const SizedBox(
+          height: 15,
+        ),
         CustomText(
           text: 'Base Fare',
           size: 15,
           weight: FontWeight.bold,
           color: dark,
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         SizedBox(
           width: 500,
           child: TextField(
-            cursorColor: green,
+            cursorColor: blue,
             decoration: InputDecoration(
-                isDense:true,
+                isDense: true,
                 contentPadding: const EdgeInsets.all(15),
                 border: const OutlineInputBorder(),
                 focusedBorder:
-                    OutlineInputBorder(borderSide: BorderSide(color: green)),
+                    OutlineInputBorder(borderSide: BorderSide(color: blue)),
                 hintText: 'Enter Base Fare'),
           ),
         ),
-        const SizedBox(height: 15,),
+        const SizedBox(
+          height: 15,
+        ),
         CustomText(
           text: 'Duration Fare (in hrs)',
           size: 15,
           weight: FontWeight.bold,
           color: dark,
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         SizedBox(
           width: 500,
           child: TextField(
-            cursorColor: green,
+            cursorColor: blue,
             decoration: InputDecoration(
-                isDense:true,
+                isDense: true,
                 contentPadding: const EdgeInsets.all(15),
                 border: const OutlineInputBorder(),
                 focusedBorder:
-                    OutlineInputBorder(borderSide: BorderSide(color: green)),
+                    OutlineInputBorder(borderSide: BorderSide(color: blue)),
                 hintText: 'Enter duration fare in hours'),
           ),
         ),
-        const SizedBox(height: 15,),
+        const SizedBox(
+          height: 15,
+        ),
         CustomText(
           text: 'Distance Fare (in km)',
           size: 15,
           weight: FontWeight.bold,
           color: dark,
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         SizedBox(
           width: 500,
           child: TextField(
-            cursorColor: green,
+            cursorColor: blue,
             decoration: InputDecoration(
-              isDense:true,
+                isDense: true,
                 contentPadding: const EdgeInsets.all(15),
                 border: const OutlineInputBorder(),
                 focusedBorder:
-                    OutlineInputBorder(borderSide: BorderSide(color: green)),
+                    OutlineInputBorder(borderSide: BorderSide(color: blue)),
                 hintText: 'Enter distance fare in km'),
           ),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         SizedBox(
           width: 500,
           child: Center(
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: green,
-                fixedSize:const Size(100, 35)
-              ),
-                onPressed: (){}, child: const Text('Add',style: TextStyle(color: Colors.white,letterSpacing: 1,fontWeight: FontWeight.bold),)),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: blue, fixedSize: const Size(100, 35)),
+                onPressed: () {},
+                child: const Text(
+                  'Add',
+                  style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.bold),
+                )),
           ),
         )
       ],
@@ -219,24 +238,24 @@ class PricingPage extends StatelessWidget {
           children: [
             Expanded(
               child: TextField(
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green)),
+                        borderSide: BorderSide(color: blue)),
                     hintText: 'Enter Location'),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextField(
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green)),
+                        borderSide: BorderSide(color: blue)),
                     hintText: 'Enter from pincode'),
               ),
             ),
@@ -247,24 +266,24 @@ class PricingPage extends StatelessWidget {
           children: [
             Expanded(
               child: TextField(
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green)),
+                        borderSide: BorderSide(color: blue)),
                     hintText: 'Enter to pincode'),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextField(
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green)),
+                        borderSide: BorderSide(color: blue)),
                     hintText: 'Select specific place'),
               ),
             ),

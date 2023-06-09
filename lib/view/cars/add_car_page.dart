@@ -66,7 +66,7 @@ class _AddCarPageState extends State<AddCarPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -91,7 +91,7 @@ class _AddCarPageState extends State<AddCarPage> {
                   text: 'Add Car',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -115,7 +115,7 @@ class _AddCarPageState extends State<AddCarPage> {
       child: isLoading == false
           ? Center(
               child: CircularProgressIndicator(
-                color: green,
+                color: blue,
               ),
             )
           : carListModel!.body!.carList!.isEmpty
@@ -216,7 +216,7 @@ class _AddCarPageState extends State<AddCarPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var chassisImageUrl = carsList.chassisPic ?? '';
                                         await launchUrl(Uri.parse(chassisImageUrl));
@@ -247,7 +247,7 @@ class _AddCarPageState extends State<AddCarPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var rcFrontUrl = carsList.rcFront ?? '';
                                         await launchUrl(Uri.parse(rcFrontUrl));
@@ -272,7 +272,7 @@ class _AddCarPageState extends State<AddCarPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var rcBackUrl = carsList.rcBack ?? '';
                                         await launchUrl(Uri.parse(rcBackUrl));
@@ -297,7 +297,7 @@ class _AddCarPageState extends State<AddCarPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var insuranceUrl = carsList.insurence ?? '';
                                         await launchUrl(Uri.parse(insuranceUrl));
@@ -322,7 +322,7 @@ class _AddCarPageState extends State<AddCarPage> {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: green)),
+                                          side: BorderSide(color: blue)),
                                       onPressed: () async{
                                         var fcUrl = carsList.fcCopy ?? '';
                                         await launchUrl(Uri.parse(fcUrl));
@@ -420,7 +420,7 @@ class _AddCarPageState extends State<AddCarPage> {
       child: isLoading == false
           ? Center(
               child: CircularProgressIndicator(
-                color: green,
+                color: blue,
               ),
             )
           : ListView.separated(
@@ -492,7 +492,7 @@ class _AddCarPageState extends State<AddCarPage> {
                             ),
                             OutlinedButton(
                               style: OutlinedButton.styleFrom(
-                                  side: BorderSide(color: green)),
+                                  side: BorderSide(color: blue)),
                               onPressed: () {},
                               child: const CustomText(text: 'View'),
                             )
@@ -514,7 +514,7 @@ class _AddCarPageState extends State<AddCarPage> {
                             ),
                             OutlinedButton(
                               style: OutlinedButton.styleFrom(
-                                  side: BorderSide(color: green)),
+                                  side: BorderSide(color: blue)),
                               onPressed: () {},
                               child: const CustomText(text: 'View'),
                             )
@@ -536,7 +536,7 @@ class _AddCarPageState extends State<AddCarPage> {
                             ),
                             OutlinedButton(
                               style: OutlinedButton.styleFrom(
-                                  side: BorderSide(color: green)),
+                                  side: BorderSide(color: blue)),
                               onPressed: () {},
                               child: const CustomText(text: 'View'),
                             )
@@ -558,7 +558,7 @@ class _AddCarPageState extends State<AddCarPage> {
                             ),
                             OutlinedButton(
                               style: OutlinedButton.styleFrom(
-                                  side: BorderSide(color: green)),
+                                  side: BorderSide(color: blue)),
                               onPressed: () {},
                               child: const CustomText(text: 'View'),
                             )
@@ -580,7 +580,7 @@ class _AddCarPageState extends State<AddCarPage> {
                             ),
                             OutlinedButton(
                               style: OutlinedButton.styleFrom(
-                                  side: BorderSide(color: green)),
+                                  side: BorderSide(color: blue)),
                               onPressed: () {},
                               child: const CustomText(text: 'View'),
                             )
@@ -602,7 +602,7 @@ class _AddCarPageState extends State<AddCarPage> {
                             ),
                             OutlinedButton(
                               style: OutlinedButton.styleFrom(
-                                  side: BorderSide(color: green)),
+                                  side: BorderSide(color: blue)),
                               onPressed: () {},
                               child: const CustomText(text: 'View'),
                             )

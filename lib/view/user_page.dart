@@ -20,7 +20,6 @@ class UserPage extends StatefulWidget {
 }
 
 class _UserPageState extends State<UserPage> {
-
   RegisteredUsersListModel? registeredUsersListModel;
 
   bool isLoading = false;
@@ -33,7 +32,7 @@ class _UserPageState extends State<UserPage> {
 
   void getData() async {
     registeredUsersListModel = await ApiService().registeredUsersList();
-    if(registeredUsersListModel != null){
+    if (registeredUsersListModel != null) {
       setState(() {
         isLoading = true;
       });
@@ -48,47 +47,46 @@ class _UserPageState extends State<UserPage> {
     return AdminScaffold(
         backgroundColor: light,
         appBar: AppBar(
-        title: const Text(
-        'Admin Panel',
-        style: TextStyle(color: Colors.black),
-    ),
-    backgroundColor: Colors.white,
-    actions: [
-    IconButton(
-    onPressed: () {
-    Get.offAll(const AuthenticationPage());
-    },
-    icon: const Icon(
-    Icons.logout,
-    color: Colors.black,
-    ))
-    ],
-    ),
-    sideBar: SideBarWidget().sidebarMenus(UserPage.id),
-    body: Padding(
-      padding: const EdgeInsets.all(20),
-      child: SizedBox(
-        width: Get.width,
-        height: Get.height,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomText(
-              text: 'Users',
-              size: 20,
-              weight: FontWeight.bold,
-              color: green,
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-                child: ListView(
-                  children: [buildUsersTable()],
-                )),
+          title: const Text(
+            'Admin Panel',
+            style: TextStyle(color: Colors.black),
+          ),
+          backgroundColor: yellow,
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Get.offAll(const AuthenticationPage());
+                },
+                icon: const Icon(
+                  Icons.logout,
+                  color: Colors.black,
+                ))
           ],
         ),
-      ),
-    )
-    );
+        sideBar: SideBarWidget().sidebarMenus(UserPage.id),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: SizedBox(
+            width: Get.width,
+            height: Get.height,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomText(
+                  text: 'Users',
+                  size: 20,
+                  weight: FontWeight.bold,
+                  color: blue,
+                ),
+                const SizedBox(height: 20),
+                Expanded(
+                    child: ListView(
+                  children: [buildUsersTable()],
+                )),
+              ],
+            ),
+          ),
+        ));
   }
 
   buildUsersTable() {
@@ -109,42 +107,46 @@ class _UserPageState extends State<UserPage> {
         margin: const EdgeInsets.only(bottom: 30),
         child: isLoading == false
             ? Center(
-          child: CircularProgressIndicator(
-            color: green,
-          ),
-        )
+                child: CircularProgressIndicator(
+                  color: blue,
+                ),
+              )
             : registeredUsersListModel!.body!.userlist!.isEmpty
-            ? Center(child: Image.asset('assets/images/nodatafound.png'))
-            : Card(
-          child: DataTable2(
-              columnSpacing: 5,
-              horizontalMargin: 12,
-              minWidth: 1000,
-              columns: [
-                DataColumn(
-                  label: Text('S:No', style: TextStyle(fontSize: 15, color: green)),
-                ),
-                DataColumn(
-                  label: Text('Name', style: TextStyle(fontSize: 15, color: green)),
-                ),
-                DataColumn(
-                  label: Text('Contact', style: TextStyle(fontSize: 15, color: green)),
-                ),
-                DataColumn(
-                    label: Text('Email',
-                        style: TextStyle(fontSize: 15, color: green))),
-              ],
-              rows: List.generate(
-                  registeredUsersListModel!.body!.userlist!.length,
-                      (index) {
-                    var e = registeredUsersListModel!.body!.userlist![index];
-                    return DataRow(cells: [
-                      DataCell(Text('${index + 1}')),
-                      DataCell(Text('${e.name}')),
-                      DataCell(Text('${e.contact}')),
-                      DataCell(Text('${e.email}')),
-                    ]);
-                  })),
-        ));
+                ? Center(child: Image.asset('assets/images/nodatafound.png'))
+                : Card(
+                    child: DataTable2(
+                        columnSpacing: 5,
+                        horizontalMargin: 12,
+                        minWidth: 1000,
+                        columns: [
+                          DataColumn(
+                            label: Text('S:No',
+                                style: TextStyle(fontSize: 15, color: blue)),
+                          ),
+                          DataColumn(
+                            label: Text('Name',
+                                style: TextStyle(fontSize: 15, color: blue)),
+                          ),
+                          DataColumn(
+                            label: Text('Contact',
+                                style: TextStyle(fontSize: 15, color: blue)),
+                          ),
+                          DataColumn(
+                              label: Text('Email',
+                                  style: TextStyle(fontSize: 15, color: blue))),
+                        ],
+                        rows: List.generate(
+                            registeredUsersListModel!.body!.userlist!.length,
+                            (index) {
+                          var e =
+                              registeredUsersListModel!.body!.userlist![index];
+                          return DataRow(cells: [
+                            DataCell(Text('${index + 1}')),
+                            DataCell(Text('${e.name}')),
+                            DataCell(Text('${e.contact}')),
+                            DataCell(Text('${e.email}')),
+                          ]);
+                        })),
+                  ));
   }
 }

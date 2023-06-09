@@ -24,11 +24,11 @@ class _ProfilePageState extends State<ProfilePage> {
     return AdminScaffold(
         backgroundColor: light,
         appBar: AppBar(
-          title: const Text(
+          title:  Text(
             'Admin Panel',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -53,7 +53,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   text: 'Profile',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(
                   height: 20,
@@ -72,7 +72,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Obx(() {
       if (controller.isLoading.value) {
         return Center(
-          child: CircularProgressIndicator(color: green),
+          child: CircularProgressIndicator(color: blue),
         );
       }
       return SingleChildScrollView(
@@ -88,7 +88,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: const EdgeInsets.all(10),
                       child: CustomText(
                         text: "Name :",
-                        color: green,
+                        color: blue,
                         weight: FontWeight.w900,
                       ),
                     ),
@@ -97,13 +97,13 @@ class _ProfilePageState extends State<ProfilePage> {
                     width: 300,
                     child: TextFormField(
                       controller: controller.nameController,
-                      cursorColor: green,
+                      cursorColor: blue,
                       decoration: InputDecoration(
                           contentPadding: const EdgeInsets.all(10),
                           border: const OutlineInputBorder(),
                           hintText: "Enter your name",
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: green))),
+                              borderSide: BorderSide(color: blue))),
                     ),
                   ),
                 ],
@@ -117,7 +117,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: const EdgeInsets.all(10),
                       child: CustomText(
                         text: "Phone Number :",
-                        color: green,
+                        color: blue,
                         weight: FontWeight.w900,
                       ),
                     ),
@@ -126,13 +126,13 @@ class _ProfilePageState extends State<ProfilePage> {
                     width: 300,
                     child: TextFormField(
                       controller: controller.phoneController,
-                      cursorColor: green,
+                      cursorColor: blue,
                       decoration: InputDecoration(
                           contentPadding: const EdgeInsets.all(10),
                           border: const OutlineInputBorder(),
                           hintText: "Enter your phone number",
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: green))),
+                              borderSide: BorderSide(color: blue))),
                     ),
                   ),
                 ],
@@ -146,7 +146,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: const EdgeInsets.all(10),
                       child: CustomText(
                         text: "Email :",
-                        color: green,
+                        color: blue,
                         weight: FontWeight.w900,
                       ),
                     ),
@@ -155,13 +155,13 @@ class _ProfilePageState extends State<ProfilePage> {
                     width: 300,
                     child: TextFormField(
                       controller: controller.emailController,
-                      cursorColor: green,
+                      cursorColor: blue,
                       decoration: InputDecoration(
                           contentPadding: const EdgeInsets.all(10),
                           border: const OutlineInputBorder(),
                           hintText: "Enter your email address",
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: green))),
+                              borderSide: BorderSide(color: blue))),
                     ),
                   ),
                 ],
@@ -175,7 +175,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: const EdgeInsets.all(10),
                       child: CustomText(
                         text: "Password :",
-                        color: green,
+                        color: blue,
                         weight: FontWeight.w900,
                       ),
                     ),
@@ -184,13 +184,13 @@ class _ProfilePageState extends State<ProfilePage> {
                     width: 300,
                     child: TextFormField(
                       controller: controller.passwordController,
-                      cursorColor: green,
+                      cursorColor: blue,
                       decoration: InputDecoration(
                           contentPadding: const EdgeInsets.all(10),
                           border: const OutlineInputBorder(),
                           hintText: "Enter your password",
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: green))),
+                              borderSide: BorderSide(color: blue))),
                     ),
                   ),
                 ],

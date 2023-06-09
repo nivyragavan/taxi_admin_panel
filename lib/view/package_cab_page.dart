@@ -75,7 +75,7 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
             'Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -100,7 +100,7 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
                   text: 'Package and Cab',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -151,18 +151,18 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
                 width: 200,
                 child: TextField(
                     controller: package,
-                    cursorColor: green,
+                    cursorColor: blue,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         border: const OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green)),
+                            borderSide: BorderSide(color: blue)),
                         hintText: 'Enter Package')),
               ),
               const SizedBox(width: 20),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: green, fixedSize: const Size(70, 30)),
+                      backgroundColor: blue, fixedSize: const Size(70, 30)),
                   onPressed: () async {
                     var data = await ApiService().packageAdd(package.text);
                     if (data["statusCode"] == 1) {
@@ -196,7 +196,7 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
             child: isPackageLoading == false
                 ? Center(
                     child: CircularProgressIndicator(
-                      color: green,
+                      color: blue,
                     ),
                   )
                 : packageListModel!.body!.packageList!.isEmpty
@@ -244,7 +244,7 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
             SizedBox(
               width: 200,
               child: TextField(
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       border: const OutlineInputBorder(),
@@ -333,7 +333,7 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
               const SizedBox(width: 20),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: green, fixedSize: const Size(70, 30)),
+                      backgroundColor: blue, fixedSize: const Size(70, 30)),
                   onPressed: () async {
                     var data = await ApiService().cabAdd(cab.text);
                     if (data["statusCode"] == 1) {
@@ -415,7 +415,7 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
             SizedBox(
               width: 200,
               child: TextField(
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       border: const OutlineInputBorder(),
@@ -492,18 +492,18 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
               SizedBox(
                 width: 200,
                 child: TextField(
-                    cursorColor: green,
+                    cursorColor: blue,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         border: const OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green)),
+                            borderSide: BorderSide(color: blue)),
                         hintText: 'Enter Rental Hours')),
               ),
               const SizedBox(width: 20),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: green, fixedSize: const Size(70, 30)),
+                      backgroundColor: blue, fixedSize: const Size(70, 30)),
                   onPressed: () {},
                   child: const Text(
                     'Add',
@@ -567,12 +567,12 @@ class _PackageAndCabPageState extends State<PackageAndCabPage> {
             SizedBox(
               width: 200,
               child: TextField(
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green)),
+                          borderSide: BorderSide(color: blue)),
                       hintText: 'Enter Rental Hours')),
             ),
             const SizedBox(width: 20),
